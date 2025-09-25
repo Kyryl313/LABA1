@@ -4,7 +4,14 @@ while True:
     name = input("Ім'я студента (або stop): ")
     if name.lower() == "stop":
         break
-    grade = int(input("Оцінка: "))
+
+    while True:
+            grade = int(input("Введи оцінку студента (0-12): "))
+            if 0 <= grade <= 12:  # якщо оцінка у допустимому діапазоні
+                break
+            else:
+                print("Оцінка має бути від 0 до 12. Спробуй ще раз.")
+
     students[name] = grade
 
 print("Список студентів:",students)
