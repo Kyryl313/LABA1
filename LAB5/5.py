@@ -3,6 +3,11 @@ import emoji
 import requests
 import numpy as np
 import pandas as pd
+import pillow
+import pygame
+import colorama
+import termcolor
+import pyfiglet
 
 # Блок 1: matplotlib
 try:
