@@ -1,3 +1,9 @@
+import matplotlib.pyplot as plt
+import emoji
+import requests
+import numpy as np
+import pandas as pd
+
 # Блок 1: matplotlib
 try:
     plt.plot([1, 2, 3], [4, 5, 6])
