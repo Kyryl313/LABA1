@@ -5,7 +5,7 @@ def track_history(func):
         result = func(*args, **kwargs)
         history.append(result)
         history[:] = history[-5:]
-        print(history) #(на всякий випадок) замінити на history але тоді буде рез1 + рез2
+        print(history)
         return result
 
     wrapper.history = history
