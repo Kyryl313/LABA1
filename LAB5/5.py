@@ -1,23 +1,23 @@
-import matplotlib.pyplot as plt
-import emoji
-import requests
-import numpy as np
-import pandas as pd
-import pillow
-import pygame
-import colorama
-import termcolor
-import pyfiglet
+import matplotlib.pyplot as plt #графік
+import emoji #смайлики
+import requests #запит з сайту
+import numpy as np #масиви
+import pandas as pd #таблиця
+import pillow #обробка зображень
+import pygame #для ігор
+import colorama #виведення кольорового тексту і фону
+import termcolor #теж для тексту але легший
+import pyfiglet #для ASCII артів
 
 # Блок 1: matplotlib
-try:
+try: #пробує виконати 
     plt.plot([1, 2, 3], [4, 5, 6])
     plt.title("Графік")
     plt.savefig("grafik.png")
     plt.close()
     print("Графік збережено як grafik.png")
-except Exception as e:
-    print("Matplotlib error:", e)
+except Exception as e: #ловить помилку
+    print("Matplotlib error:", e) #і прінтить 
 
 # Блок 2: emoji
 try:
