@@ -1,12 +1,12 @@
-def track_history(func):
+def track_history(func): #приймає нашу функцію (func)
     history = []
 
-    def wrapper(*args, **kwargs):
-        result = func(*args, **kwargs)
+    def wrapper(a, b):
+        result = func(a, b) #виклик ориг. функції і зберігаємо результат як result
         history.append(result)
-        history[:] = history[-5:]
+        if len(history) > 5:
+            history.pop(0)
         print(history)
-        return result
+        return result #повертаємо результат, щоб функція працювала як звичайно.
 
-    wrapper.history = history
-    return wrapper
+    return wrapper #повертаємо внутрішню функцію, бо її викликатиме
